@@ -7,9 +7,9 @@
 
 ### Motivation
 
-- When websites need to change their design depending on whether they’re on a phone, tablet, or giant screen, they use media queries.
-- Media Queries make your website look more professional (and less 1995), and make you look css-savvy to employers.
-- It is simply an extra section added to your css file; the only challenge lies in visualizing what you want before you write your rule.
+- When websites need to change their design to match phone, tablet, or giant screen sizes, they use media queries.
+- Media queries make your website look more professional (less 1995) and make you look CSS-savvy to employers.
+- It is simply an extra section added to your CSS file; the only challenge lies in visualizing what you want before you write your rule.
 
 **Which companies use media queries?**
 Everyone. Some companies with very responsive sites are [Etsy](https://www.etsy.com/) and [Hitachi](http://www.hitachi.us/).
@@ -24,17 +24,17 @@ Everyone. Some companies with very responsive sites are [Etsy](https://www.etsy.
 
 **Participants will be able to:**
 
-- understand what media query parameters mean
-- use min (minimum size and higher) and max (maximum size and lower) for query parameters
-- understand that later styles will override styles earlier in the code
-- troubleshoot override issues
+- Understand what media query parameters mean
+- Use min (minimum size and higher) and max (maximum size and lower) for query parameters
+- Understand that later styles will override styles earlier in the code
+- Troubleshoot override issues
 
 **Specific Things to Learn:**
 
 - Practice implementing a Media Query
 - Practice using min and max width
 - Practice overriding styles and troubleshooting any unexpected overrides
-- Media Query Syntax
+- Media query syntax
 
 ### Materials
 
@@ -48,7 +48,7 @@ Everyone. Some companies with very responsive sites are [Etsy](https://www.etsy.
 #### Practice implementing a Media Query
 
 1. Create a very simple project in any folder on your computer, create a new [CodePen](https://codepen.io/pen/), or follow along in an existing project.
-1. Create an HTML file with a linked css file, a title, 3 images, and a paragraph like this:
+1. Create an HTML file with a linked CSS file, a title, 3 images, and a paragraph, like this:
    ```
    <!DOCTYPE html>
    <html lang="en" dir="ltr">
@@ -94,7 +94,7 @@ Everyone. Some companies with very responsive sites are [Etsy](https://www.etsy.
    @media (max-width: 1080px) {
    }
    ```
-1. Let’s have the views less that 1080px wide show a full-width photo.
+1. Let’s have the views less than 1080px wide show a full-width photo.
    ```css
    @media (max-width: 1080px) {
      img {
@@ -107,10 +107,10 @@ Everyone. Some companies with very responsive sites are [Etsy](https://www.etsy.
 
    #### min v max width
 
-1. OK, we got to try “max-width”, now let’s experiment with min-width.
-   Since we have everything 1080px width and less specified, we’ll add something crazy for “min-width: 1081px”, that is, everything 1081px and wider.
+1. OK, we tried “max-width”, now let’s experiment with min-width.
+   Since we have everything 1080px width and less specified, we’ll add something crazy for “min-width: 1081px”; that is, everything 1081px and wider.
    `css @media (max-width: 1080px) { img { width: 100%; } } @media (min-width: 1081px) { body { background-color: red; } }`
-1. Save and change your html page window width again to see your red background at 1081px and wider.
+1. Save and change your HTML page window width again to see your red background at 1081px and wider.
 
    #### Overriding
 
@@ -127,10 +127,10 @@ Everyone. Some companies with very responsive sites are [Etsy](https://www.etsy.
      }
    }
    ```
-1. Refresh you webpage and change the width to see your new styles. You should see:
+1. Refresh your webpage and change the width to see your new styles. You should see:
    - widths 0 - 1080 have a default white background
    - widths 1081-1199 have a red background
-   - 1200 and over has a green background, since this style starts to override the red rule after 1200px.
+   - 1200 and over have a green background since this style starts to override the red rule after 1200px.
 1. Next, highlight that 1200 media query, hold _command+ctrl_, and use the up arrow to move it before the 1081 rule. Refresh and try your webpage now.
    ```css
    @media (min-width: 1200px) {
@@ -144,8 +144,8 @@ Everyone. Some companies with very responsive sites are [Etsy](https://www.etsy.
      }
    }
    ```
-   - The green media query no longer applies because styles that come after will override any styles that come earlier in the css file. The red rule is applying to _everything_ wider than 1081px, including 1200px and up.
-   - The browser reads css and js from top to bottom, so if it applies different styles to the same screen width, _the one that is applied last wins_.
+   - The green media query no longer applies, because styles that come after will override any styles that come earlier in the CSS file. The red rule is applying to _everything_ wider than 1081px, including 1200px and up.
+   - The browser reads CSS and JS from top to bottom, so if it applies different styles to the same screen width, _the one that is applied last wins_.
    - When the media query styles you expect are not appearing, overriding is a common culprit.
 1. Practice now by going to your site window. Press _command+option+i_ to open the inspector to check out what styles are being applied in the _Elements_ tab. The green rule is not being applied.
 1. Click the 'index.css:' link by your style to see where the rule being followed is in your code. This should take you to to _Sources_ tab, and show you which line it’s on.
@@ -153,7 +153,7 @@ Everyone. Some companies with very responsive sites are [Etsy](https://www.etsy.
 #### Media Query Syntax
 
 - Last but not least, let’s look at media query syntax options. Check out the **CSS Syntax** and **Media Types** sections at [the developer.mozilla.org media query reference guide.](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax)
-- You will most likely see this syntax in css files for compatibility with old browsers:
+- You will most likely see this syntax in CSS files for compatibility with old browsers:
   `css @media only screen and () { }`
 - Remember, you can put anything in your media queries that you can put into CSS.
 
@@ -164,8 +164,8 @@ Everyone. Some companies with very responsive sites are [Etsy](https://www.etsy.
 ### Challenge
 
 1. What changes you would like to make to your recipe page project using media queries?
-   Be specific about which widths you would like to use, which elements you'd change. Sketch your ideas to help you remember.
-1. Spend about 20 minutes applying your media queries to your recipe page! If you run out of time, you should still stop, but note other changes you'd like to make later.
+   Be specific about which widths you would use and which elements you'd change. Sketch your ideas to help you remember.
+1. Spend about 20 minutes applying your media queries to your recipe page! If you run out of time, you should stop, but note other changes you'd like to make later.
 
 ### Questions to consider
 
